@@ -1,6 +1,6 @@
 {
     "name": "shlinkio/shlink-json",
-    "type": "project",
+    "type": "library",
     "homepage": "https://shlink.io",
     "description": "JSON encoding/decoding utilities",
     "license": "MIT",
