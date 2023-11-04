@@ -7,20 +7,7 @@ on:
       - main
 
 jobs:
-  static-analysis:
-    runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        php-version: ['8.1', '8.2']
-        tool: ['cs', 'stan']
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Use PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php-version }}
-          tools: composer
-          coverage: none
-      - run: composer install --no-interaction --prefer-dist
-      - run: composer ${{ matrix.tool }}
+  ci:
+    uses: shlinkio/github-actions/.github/workflows/php-lib-ci.yml@main
+    secrets:
+      INFECTION_BADGE_API_KEY: ${{ secrets.INFECTION_BADGE_API_KEY }}
