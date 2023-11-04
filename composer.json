@@ -37,7 +37,8 @@
         ],
         "cs": "phpcs",
         "cs:fix": "phpcbf",
-        "stan": "phpstan analyse functions --level=8"
+        "stan": "phpstan analyse functions --level=8",
+        "test:ci": "echo \"This library has no tests\""
     },
     "scripts-descriptions": {
         "ci": "<fg=blue;options=bold>Alias for \"cs\", \"stan\", \"test:ci\" and \"infect:ci\"</>",
