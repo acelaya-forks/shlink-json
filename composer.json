@@ -25,11 +25,6 @@
             "functions/functions.php"
         ]
     },
-    "autoload-dev": {
-        "psr-4": {
-            "ShlinkioTest\\Shlink\\Json\\": "test"
-        }
-    },
     "scripts": {
         "ci": [
             "@cs",
@@ -37,11 +32,10 @@
         ],
         "cs": "phpcs",
         "cs:fix": "phpcbf",
-        "stan": "phpstan analyse functions --level=8",
-        "test:ci": "echo \"This library has no tests\""
+        "stan": "phpstan analyse functions --level=8"
     },
     "scripts-descriptions": {
-        "ci": "<fg=blue;options=bold>Alias for \"cs\", \"stan\", \"test:ci\" and \"infect:ci\"</>",
+        "ci": "<fg=blue;options=bold>Alias for \"cs\" and \"stan\"</>",
         "cs": "<fg=blue;options=bold>Checks coding styles</>",
         "cs:fix": "<fg=blue;options=bold>Fixes coding styles, when possible</>",
         "stan": "<fg=blue;options=bold>Inspects code with phpstan</>"
