@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [Unreleased]
+### Added
+* *Nothing*
+
+### Changed
+* Update to PHPStan 1.11
+
+### Deprecated
+* *Nothing*
+
+### Removed
+* *Nothing*
+
+### Fixed
+* *Nothing*
+
+
 ## [1.1.0] - 2023-11-25
 ### Added
 * Add support for PHP 8.3
@@ -12,7 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 * *Nothing*
 
 ### Deprecated
-* Deprecated support for openswoole.
+* *Nothing*
 
 ### Removed
 * Drop support for PHP 8.1

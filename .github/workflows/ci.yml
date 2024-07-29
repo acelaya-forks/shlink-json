@@ -7,21 +7,7 @@ on:
       - main
 
 jobs:
-  static-analysis:
-    runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        php-version: ['8.2', '8.3']
-        command: ['cs', 'stan']
-    continue-on-error: ${{ matrix.php-version == '8.3' }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Use PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php-version }}
-          tools: composer
-          coverage: none
-      - run: composer install --no-interaction --prefer-dist ${{ matrix.php-version == '8.3' && '--ignore-platform-req=php' || '' }}
-      - run: composer ${{ matrix.command }}
+  ci:
+    uses: shlinkio/github-actions/.github/workflows/php-lib-ci.yml@main
+    with:
+      tests: false
