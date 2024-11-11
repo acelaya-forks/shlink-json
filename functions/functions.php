@@ -16,7 +16,7 @@ use const JSON_THROW_ON_ERROR;
  */
 function json_decode(string $json): array
 {
-    return spl_json_decode($json, true, 512, JSON_THROW_ON_ERROR);
+    return spl_json_decode($json, associative: true, flags: JSON_THROW_ON_ERROR);
 }
 
 /**
@@ -24,5 +24,5 @@ function json_decode(string $json): array
  */
 function json_encode(array|JsonSerializable $payload): string
 {
-    return spl_json_encode($payload, JSON_THROW_ON_ERROR);
+    return spl_json_encode($payload, flags: JSON_THROW_ON_ERROR);
 }
