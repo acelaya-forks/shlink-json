@@ -1,6 +1,7 @@
 services:
   shlink_json_php:
     container_name: shlink_json_php
+    user: 1000:1000
     image: composer:2
     volumes:
       - ./:/app
