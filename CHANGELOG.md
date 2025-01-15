@@ -16,7 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 * *Nothing*
 
 ### Removed
-* *Nothing*
+* Drop support for PHP 8.2
 
 ### Fixed
 * Add missing throws in `json_encode` and `json_decode` functions.
